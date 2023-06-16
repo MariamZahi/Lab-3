@@ -1,2 +1,4 @@
 # Lab-3
-Die class with a tester
+Die class with constructors
+
+#Submitted By: Mariam Zahid
