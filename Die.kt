@@ -15,6 +15,7 @@ enum class Sides(val value: Int) {
     Twenty(20)
 }
 
+// Primary Constructor
 class Die(private val color: Color, private val numSides: Sides) {
     // instead of over writing in the argument above
     var sideUp: Int = 1
@@ -26,11 +27,10 @@ class Die(private val color: Color, private val numSides: Sides) {
         roll()
     }
 
-    // Second constructor for calling primary
+    // Secondary Constructor for calling primary
     constructor() : this(Color.WHITE, Sides.Six)
     constructor(numSides: Sides) : this(Color.WHITE, numSides)
 
- 
     fun roll() {
         println("rolling the die")
         sideUp = Random.nextInt(1, numSides.value + 1)
@@ -41,7 +41,4 @@ class Die(private val color: Color, private val numSides: Sides) {
     }
 }
 
-fun main(){
-    val die = Die (Sides.Twenty)
-    print(die.sideUp)
-}
+
