@@ -1,4 +1,5 @@
 package game
+import kotlin.random.Random
 
 enum class Color {
     RED,
@@ -7,7 +8,7 @@ enum class Color {
 
 }
 
-enum class Digits(val value: Int){
+enum class Sides(val value: Int){
     Three(3),
     Four(4),
     Six(6),
@@ -15,11 +16,11 @@ enum class Digits(val value: Int){
 
 }
 
-class Die(private val color: Color, private val numSides:Digits ){
+class Die(private val color: Color, private val numSides:Sides ){
 
 }
 
 fun main (){
-    val die =Die(Color.RED, Digits.Four)
-    println(Digits.Four.name.lowercase())
-}
+    val die =Die(Color.RED, Sides.Four)
+    print(Random.nextInt(1,10))
+    }
