@@ -26,6 +26,11 @@ class Die(private val color: Color, private val numSides:Sides ){
     init {
         roll()
     }
+
+     // Second constructor for calling primary 
+     constructor(): this(Color.WHITE, Sides.Six)
+     constructor(numSides: Sides): this(Color.WHITE, numSides)
+
     fun roll() {
         println("rolling the die")
         sideUp = Random.nextInt(1, numSides.value + 1) 
