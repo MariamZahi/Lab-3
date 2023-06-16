@@ -17,10 +17,19 @@ enum class Sides(val value: Int){
 }
 
 class Die(private val color: Color, private val numSides:Sides ){
+   //instead of over writing in the argument above 
+    var sideUp: Int = 1
+    private set
+    
+
+    //intialize here and specify class
+    init {
+        roll()
+    }
+    fun roll() {
+        println("rolling the die")
+        sideUp = Random.nextInt(1, numSides.value + 1) 
+    }
 
 }
 
-fun main (){
-    val die =Die(Color.RED, Sides.Four)
-    print(Random.nextInt(1,10))
-    }
