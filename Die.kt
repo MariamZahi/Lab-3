@@ -20,7 +20,7 @@ class Die(private val color: Color, private val numSides:Sides ){
    //instead of over writing in the argument above 
     var sideUp: Int = 1
     private set
-    
+    //Don't want user to mess up entries so we specify 1
 
     //intialize here and specify class
     init {
